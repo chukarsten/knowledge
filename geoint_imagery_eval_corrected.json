@@ -1,0 +1,142 @@
+[
+  {
+    "user_query": "What's EO imagery?",
+    "expected_response": "EO refers to Electro-Optical sensors that capture visible or infrared light,\nsimilar to traditional camera systems. These sensors provide traditional satellite\nor aerial imagery. EO performs well for detailed analysis under clear weather\nand adequate lighting conditions."
+  },
+  {
+    "user_query": "How does EO actually work?",
+    "expected_response": "EO sensors capture reflected sunlight or emitted thermal radiation in the visible\nand infrared spectral bands. The sensor detects electromagnetic radiation,\nconverts it to digital signals, and produces imagery. Image quality depends on\noptics quality and detector sensitivity."
+  },
+  {
+    "user_query": "When should I use EO over SAR?",
+    "expected_response": "EO imagery is intuitive to interpret and provides excellent spatial detail\nfor identifying vehicles, structures, and activities. EO is preferred for detailed\nfeature extraction and pattern-of-life analysis when weather conditions are favorable\nand visual interpretation is required."
+  },
+  {
+    "user_query": "What are the downsides of EO?",
+    "expected_response": "EO sensors are weather-dependent. Clouds, haze, and smoke block optical wavelengths\ncompletely. Visible bands require daylight, though infrared can operate at night.\nTargets under cloud cover or in persistent cloud regions cannot be imaged effectively\nwith EO sensors."
+  },
+  {
+    "user_query": "What's the difference between pan and multi?",
+    "expected_response": "Panchromatic imagery is single-band grayscale with higher spatial resolution,\nsuited for detailed feature identification and measurement. Multispectral imagery\ncaptures multiple spectral bands at lower spatial resolution, enabling spectral analysis\nfor material discrimination and vegetation assessment. Pan and multispectral are often\nfused to combine high resolution with spectral information."
+  },
+  {
+    "user_query": "What's SAR and why would I use it?",
+    "expected_response": "SAR (Synthetic Aperture Radar) is an active sensor that transmits microwave pulses\nand measures backscattered returns. SAR operates day or night and penetrates clouds.\nImagery interpretation requires specialized training, but SAR provides reliable\nall-weather collection capability."
+  },
+  {
+    "user_query": "How does SAR actually work?",
+    "expected_response": "SAR transmits microwave pulses toward the ground and records backscattered signals.\nAs the platform moves along its flight path, returns from multiple positions are\nsynthesized to create high-resolution imagery. This synthetic aperture processing\ncreates a large virtual antenna from a smaller physical antenna."
+  },
+  {
+    "user_query": "Why use SAR instead of EO?",
+    "expected_response": "SAR provides all-weather, day-night collection capability. Microwave frequencies\npenetrate clouds, enabling consistent collection schedules regardless of weather\nor season. SAR is essential for persistent monitoring in cloud-prone regions\nand for nighttime collection requirements."
+  },
+  {
+    "user_query": "What's polarimetry in SAR?",
+    "expected_response": "Polarimetry refers to transmitting and receiving radar signals in different\npolarizations (horizontal and vertical combinations). Different materials and\nsurface types scatter polarizations differently, enabling discrimination between\nvegetation, water, urban structures, and metallic objects that single-polarization\nSAR cannot provide."
+  },
+  {
+    "user_query": "What does coherence mean in SAR?",
+    "expected_response": "Coherence measures phase correlation between two SAR images of the same location\nacquired at different times. High coherence indicates stable surfaces with no change.\nLow coherence indicates surface change or movement between acquisitions. Coherence\nis useful for change detection and for indicating where interferometric phase is\nreliable, but deformation itself is measured from the InSAR phase, not from coherence."
+  },
+  {
+    "user_query": "What's InSAR used for?",
+    "expected_response": "InSAR (Interferometric SAR) uses phase differences between multiple SAR acquisitions\nto measure ground elevation and detect surface movements. Deformation is measured at\nmillimeter-to-centimeter precision (DInSAR/PSInSAR), while elevation/DEM accuracy is\nmeter-level. Applications include monitoring infrastructure subsidence, earthquake\ndeformation, and volcanic activity over time."
+  },
+  {
+    "user_query": "What's NIIRS?",
+    "expected_response": "NIIRS (National Imagery Interpretability Rating Scale) is a standardized scale\nfrom 0 to 9 that rates imagery interpretability. Higher ratings indicate greater detail\nand interpretability. NIIRS defines what can be detected, recognized, and identified\nin imagery, ranging from basic detection to detailed feature identification."
+  },
+  {
+    "user_query": "How does NIIRS relate to resolution?",
+    "expected_response": "NIIRS generally correlates with Ground Sample Distance (GSD), where finer resolution\ntypically yields higher NIIRS ratings. However, NIIRS also incorporates image quality\nfactors including contrast, sharpness, and clarity. Imagery with adequate resolution\nbut poor image quality may receive lower NIIRS ratings."
+  },
+  {
+    "user_query": "What's the difference between NIIRS and GSD?",
+    "expected_response": "GSD measures physical pixel size on the ground (e.g., 50cm GSD). NIIRS measures\noperational interpretability - what can be detected, recognized, or identified.\nNIIRS provides intelligence value assessment, while GSD is a technical specification.\nFine GSD (high resolution) does not guarantee high NIIRS if image quality is poor."
+  },
+  {
+    "user_query": "What does GSD mean?",
+    "expected_response": "GSD (Ground Sample Distance) represents the physical ground area covered by one pixel.\nFor example, 30cm GSD means each pixel represents a 30cm by 30cm ground area.\nSmaller GSD values indicate finer spatial resolution. GSD is a primary specification\nfor evaluating whether imagery meets collection requirements."
+  },
+  {
+    "user_query": "What's temporal resolution?",
+    "expected_response": "Temporal resolution is the revisit frequency for imaging the same location.\nHigh temporal resolution enables frequent revisits, important for monitoring dynamic\nactivities, detecting changes, and capturing time-sensitive targets. Temporal resolution\noften trades off with spatial resolution and coverage area."
+  },
+  {
+    "user_query": "What's spectral resolution?",
+    "expected_response": "Spectral resolution refers to the number and width of spectral bands captured.\nHigher spectral resolution (more and narrower bands) enables finer material discrimination.\nApplications include vegetation health assessment and soil type classification.\nHyperspectral sensors provide hundreds of bands for detailed spectral analysis."
+  },
+  {
+    "user_query": "When should I use EO vs SAR?",
+    "expected_response": "EO provides intuitive imagery with excellent detail under clear weather conditions\nand is easier to interpret. SAR enables persistent monitoring with all-weather capability.\nIn practice, both modalities are complementary. EO is preferred for detailed exploitation\nwhen available. SAR maintains collection continuity and fills weather-related gaps."
+  },
+  {
+    "user_query": "What's orthorectification?",
+    "expected_response": "Orthorectification corrects geometric distortions caused by terrain relief, sensor\nviewing geometry, and Earth curvature. The process produces planimetrically correct\nimagery where features appear in true ground positions. Orthorectified imagery enables\naccurate measurements, map overlay, and multi-temporal image comparison."
+  },
+  {
+    "user_query": "What's image registration?",
+    "expected_response": "Image registration aligns multiple images to a common coordinate reference frame,\nensuring spatial correspondence between pixels. Registration is critical for change\ndetection, requiring precise alignment to identify differences between acquisitions.\nRegistration also enables multi-sensor fusion and mosaic generation."
+  },
+  {
+    "user_query": "I need to identify what's at a specific coordinate - what should I collect?",
+    "expected_response": "High-resolution EO imagery provides optimal identification capability when weather permits.\nPanchromatic or visible imagery offers clearest feature identification. If cloud cover\nprevents EO collection or immediate coverage is required, SAR can provide identification,\nthough higher NIIRS ratings are needed for confident feature identification compared to EO."
+  },
+  {
+    "user_query": "How do I monitor a facility that's cloudy most of the year?",
+    "expected_response": "SAR should be the primary sensor for persistent monitoring in cloud-prone regions.\nEstablish regular SAR collection schedules to track structural changes and activity patterns.\nTask EO during clear weather windows for detailed feature identification and to validate\nSAR observations."
+  },
+  {
+    "user_query": "What's the best way to do change detection on a military base?",
+    "expected_response": "Use registered multi-temporal imagery from the same sensor with consistent viewing\ngeometry and conditions. SAR coherence change detection effectively identifies new\nconstruction or equipment movement. Follow up with high-resolution EO for detailed\nanalysis of changes. Maintain consistent revisit schedules for reliable change detection."
+  },
+  {
+    "user_query": "I need to track vehicle movements at a port - what's my collection strategy?",
+    "expected_response": "High temporal resolution is required. SAR provides frequent revisits regardless\nof weather conditions and can detect vehicle positions and movement between acquisitions.\nTask EO during clear weather for detailed vehicle type identification and container\ncounting and classification when specific identification is required."
+  },
+  {
+    "user_query": "How do I characterize a newly discovered facility?",
+    "expected_response": "Employ multi-phase approach: Acquire baseline EO and SAR for initial layout and\nfeature identification. Use high-resolution EO for detailed infrastructure mapping\nand dimensional measurements. SAR coherence analysis identifies stable versus active\nareas. Conduct regular revisits in both modalities to establish pattern-of-life\nand activity signatures over time."
+  },
+  {
+    "user_query": "What if I need 24/7 monitoring of a target?",
+    "expected_response": "SAR is required for continuous coverage as it operates day and night in all weather.\nEstablish frequent SAR tasking to capture activity regardless of conditions. Supplement\nwith EO when available for detailed identification and visual confirmation. True persistent\nmonitoring may require multiple SAR platforms to achieve adequate revisit rates."
+  },
+  {
+    "user_query": "How do I detect if something was moved or removed from a site?",
+    "expected_response": "SAR coherence change detection effectively identifies surface changes, where low\ncoherence indicates change occurred. Precisely register before and after imagery for\ncomparison. EO provides visual change detection when cloud-free acquisitions are available.\nUse both modalities when possible - SAR detects that change occurred, EO identifies\nwhat specifically changed."
+  },
+  {
+    "user_query": "What's the best way to measure a new runway construction?",
+    "expected_response": "Use orthorectified high-resolution EO for accurate dimensional measurements, as\ngeometric correction is required for precision. SAR can track construction progress\nbetween EO acquisitions when weather prevents optical collection. Collect both modalities\nat consistent intervals to document progress. EO provides material identification,\nSAR provides all-weather continuity."
+  },
+  {
+    "user_query": "How do I identify camouflaged or concealed equipment?",
+    "expected_response": "Multispectral EO is effective as camouflage often fails in infrared bands despite\neffectiveness in visible wavelengths. SAR polarimetry can detect metallic objects\nunder vegetation that optical sensors cannot penetrate. Employ spectral analysis\non EO to identify signature anomalies, and SAR to penetrate light cover. Multiple\nviewing geometries help reveal concealed features."
+  },
+  {
+    "user_query": "What collection plan would you use for pattern-of-life analysis?",
+    "expected_response": "Consistent temporal coverage over weeks or months is required. SAR maintains baseline\nmonitoring through all conditions. Supplement with EO during clear periods for activity\nidentification. Collect at varied times to capture different activity patterns. Archive\nall acquisitions for time-series analysis to identify routines, anomalies, and trends."
+  },
+  {
+    "user_query": "How do I verify battle damage assessment after a strike?",
+    "expected_response": "Acquire immediate post-strike SAR if weather prevents optical collection - SAR shows\nstructural damage and debris fields regardless of smoke or clouds. Follow with high-resolution\nEO when weather permits for detailed BDA and precise damage identification. Compare\npost-strike imagery to pre-strike baseline. SAR coherence change precisely identifies\nstrike impact areas."
+  },
+  {
+    "user_query": "What if I need to monitor a site but only have weekly revisit?",
+    "expected_response": "Task both EO and SAR to maximize weekly acquisitions and avoid single-sensor dependence.\nIf EO is prevented by clouds, SAR coverage is still achieved. Archive all acquisitions\nand focus on detecting changes between revisits. Short-term activities may be missed,\nbut longer-term trends and permanent changes can be tracked."
+  },
+  {
+    "user_query": "How would you plan collection for a denied area?",
+    "expected_response": "SAR is critical as it is more difficult to deny and less affected by weather or\nconcealment tactics. Use multiple look angles and polarizations to counter denial\nmeasures. Task EO for detailed identification when achievable, but assume weather\nand conditions will be unfavorable. Consider commercial sources to supplement government\ncollectors for increased revisit frequency."
+  },
+  {
+    "user_query": "What's the best way to detect new trenches or earthworks?",
+    "expected_response": "SAR is highly effective as earthworks create strong radar returns and distinct shadows.\nFresh excavation causes coherence loss (detectable via coherence change), and elevation\nchanges can be measured by differencing pre- and post-event DEMs. EO provides visual\nconfirmation and better identification of earthwork purpose. Precisely register pre and\npost imagery - fresh earth exhibits different signatures in both modalities compared to\nsurrounding terrain."
+  },
+  {
+    "user_query": "How do I exploit imagery when I have both EO and SAR of the same target?",
+    "expected_response": "Begin with EO for initial orientation as it is more intuitive. Use EO to identify\nfeatures and establish baseline understanding. Overlay SAR to identify features EO\nmissed - metallic objects, subtle changes, or optically obscured features. SAR coherence\nidentifies stable versus changed areas. Multi-modal exploitation provides significantly\nmore information than either modality alone."
+  }
+]
